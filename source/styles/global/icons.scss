@@ -1,0 +1,15 @@
+.icon {
+    margin: auto auto 23px auto;
+
+    &_like {
+        @include sprite($like);
+    }
+
+    &_book {
+        @include sprite($book);
+    }
+
+    &_message {
+        @include sprite($message);
+    }
+}
