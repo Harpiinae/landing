@@ -2,6 +2,16 @@
     padding: 85px 0 94px;
     background-color: #f3f3f3;
 
+    .title {
+        @media (max-width: 985px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (max-width: 985px) {
+        padding: 20px;
+    }
+
     &_list {
         padding: 0;
         margin: 0;
@@ -15,13 +25,31 @@
         color: #424242;
         background: #fff;
 
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+
+        
+        @media (max-width: 700px) {
+            flex-direction: column;
+            text-align: center;
+        }
+
         &:nth-child(2n) {
-            display: flex;
             flex-direction: row-reverse;
             text-align: right;
 
+            @media (max-width: 700px) {
+                flex-direction: column;
+                text-align: center;
+            }
+
             .approch_text {
                 padding: 70px 90px;
+
+                @media (max-width: 985px) {
+                    padding: 20px;
+                }
             }
 
             .approch_step {
@@ -37,6 +65,16 @@
         max-height: 236px;
         display: inline-block;
         vertical-align: top;
+
+        @media (max-width: 985px) {
+            max-width: calc(340px / 1.5);
+            max-height: calc(236px / 1.5);
+        }
+        
+        @media (max-width: 700px) {
+            margin: auto;
+            margin-top: 15px;
+        }
     }
 
     &_picture {
@@ -51,6 +89,11 @@
         width: 64%;
         padding: 70px 70px 55px 90px;
         font-size: 0.875rem;
+
+        @media (max-width: 985px) {
+            padding: 20px;
+            width: 100%;
+        }
     }
 
     &_step {
@@ -75,6 +118,10 @@
             font-size: 3rem;
             line-height: 1;
             color: #fff;
+        }
+        
+        @media (max-width: 985px) {
+            display: none;
         }
     }
 

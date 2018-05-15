@@ -5,6 +5,11 @@
     color: #fff;
     background: #ccc url('../images/hero-bg.jpg') center/cover no-repeat;
 
+    @media (max-width: 985px) {
+        padding: 100px 20px;
+        min-height: inherit;
+    }
+
     &_about {
         font-family: $ff-main-bold;
         font-size: 3rem;
