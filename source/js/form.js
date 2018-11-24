@@ -19,5 +19,24 @@
         form.classList.add('is_hidden');
     };
 
+    me.isValid = function() {
+        if(me.isAllCompleted(document.querySelectorAll('[data-valid="required"]'))) {
+            return true;
+        };
+    };
+
+    me.isAllCompleted = function(data) {
+        var result = true;
+
+        for (var i = 0; i < data.length; i++) {
+            if(!validation.isNotEmpty(data[i].value)) {
+                result = false;
+                break
+            }
+        }
+
+        return result;
+    };
+
     window.form = me;
 }());
